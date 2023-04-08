@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hemant Career</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+        #content {
+            margin: 0 20%;
+            padding: 1% 5% 10%;
+            background-color: lightblue;
+            --bs-bg-opacity: .5;
+        }
+
+        #banner {
+            width: 100%;
+        }
+
+        body {
+            background-image: url("https://hemant-career-website.hemantparmar.repl.co/static/background.jpg");
+            background-color: aqua;
+            background-repeat: repeat;
+            background-size: 100%;
+            background-attachment: fixed;
+        }
+
+        #heading {
+            color: red;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-image: url("https://replit.com/@HemantParmar/Hemant-career-website#static/bgim.jpg");
+            text-align: center;
+        }
+
+        .subheading {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .lorem {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body >
+    <div id="content">
+        <h1 id="heading">
+            Hemant Parmar
+        </h1>
+        <img class="img-fluid" id="banner" src="https://hemant-career-website.hemantparmar.repl.co/static/bg.gif" alt="a general landscape image.">
+        <hr>
+        <h2 class="subheading">
+            about me
+        </h2>
+        <p class="lorem Lead">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus illo suscipit esse est facilis autem qui harum quaerat optio unde debitis, dicta, dolor assumenda ab, explicabo vero quasi? Officiis, exercitationem.
+        </p>
+        <h2 class="subheading">
+            my skillset
+        </h2>
+        <p>
+          {% for skill in skills %}
+            {% include 'skillset.html' %}
+          {% endfor %}          
+        </p>
+        <ul>
+            <li>Python</li>
+            <li>Machine learning</li>
+            <li>Web developement</li>
+            <li>DBMS</li>
+        </ul>
+        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Contact me</p>
+        <ul>
+            <li>Email</li>
+            <li>Insta</li>
+            <li><a href="https://www.linkedin.com/in/hemant-parmar-968543251">linkedIn</a></li>
+            <li>Github</li>
+        </ul>
+    </div>
+</body>
+</html>
